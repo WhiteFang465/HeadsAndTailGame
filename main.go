@@ -14,8 +14,7 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 }
 
 func playRound(w http.ResponseWriter, r *http.Request) {
-	//i have added here playerChoice variable
-	//from object request, we getting variable "c" content
+	
 	playerChoice, _ := strconv.Atoi(r.URL.Query().Get("c"))
 	result := rps.PlayRound(playerChoice)
 
